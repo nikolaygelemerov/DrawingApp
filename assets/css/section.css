@@ -1,5 +1,5 @@
 #container #section {
-    height: 45.1em;
+    height: 49.2em;
     
     /* border: 1px solid red; */
 }
@@ -27,19 +27,19 @@
 #shapes-menu::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
+	border-radius: 0px;
 	background-color: #F5F5F5;
 }
 
 #shapes-menu::-webkit-scrollbar
 {
-	width: 12px;
+	width: 8px;
 	background-color: #F5F5F5;
 }
 
 #shapes-menu::-webkit-scrollbar-thumb
 {
-	border-radius: 10px;
+	border-radius: 0px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #555;
 }
