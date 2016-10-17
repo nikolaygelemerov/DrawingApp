@@ -37,7 +37,7 @@
                     <span id="undo" title="undo"><i class="fa fa-undo" aria-hidden="true"></i></span>&nbsp;&nbsp;
                     <span id="redo" title="redo"><i class="fa fa-repeat" aria-hidden="true"></i></span>
                 </div>
-                                
+
                 <div id="radToolbar">
                     <div id="rad">
                         Size <span id="radval">15</span>
