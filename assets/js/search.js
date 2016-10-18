@@ -251,6 +251,16 @@ $(document).ready(function() {
 		}
 	});
 	
+	$.get('assets/php/checkUser.php', function(data) {
+		var printName = data;
+		printName = printName.replace(/['"]+/g, '');
+		if ($("#loggedUser").html() != printName) {
+			$("<p id='userPics'>"  + printName + "'s pictures</p>").appendTo("#canvas-footer");
+		} else {
+			$("<p id='userPics'>My pictures</p>").appendTo("#canvas-footer");
+		}	
+	});
+	
 	var counter = 0;
 	var index = 0;
 	for (var i = 0; i < 30; i++) {

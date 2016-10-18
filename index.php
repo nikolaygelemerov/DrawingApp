@@ -25,7 +25,7 @@
                     <div id="nav-menu">
                         <?php if (isset($_SESSION['login'])): ?>
                             <?php if ($_SESSION['login'] == "logged"): ?>
-                                <span id="origUser" title="View my pcitures"><i class="fa fa-user-secret"></i><span><?php echo $_SESSION['username'] ?></span></span>
+                                <span id="origUser" title="View my pcitures"><i class="fa fa-user-secret"></i><span id="loggedUser"><?php echo $_SESSION['username'] ?></span></span>
                                 <span id="save">Save <i class="fa fa-save"></i></span>
                             <?php endif; ?> 
                         <?php endif; ?> 
