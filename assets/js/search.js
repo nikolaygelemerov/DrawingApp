@@ -58,13 +58,16 @@ $(function() {
 	               data: {value: value},
 	               dataType: 'json',
 	               success: function (data) {
-	            	   if (data.success) {		            		   
+	            	   if (data.success) {		
+	            		   $("#queryResult").empty();
 	            		   $("#retrievedUser").empty();
-	                	   $("<p style='height:50px; padding-top:20px;'>" + 
+	            		   $("<p style='height:50px; padding-top:20px;'>" + 
 	                				"<i class='fa fa-user-secret'></i><span id='retrievedUser1'>" + value + 
 		                				"</span><i class='fa fa-close' id='removeUser'></i></p>" + 
 	                				"<i class='fa fa-eye'></i>&nbsp;&nbsp;&nbsp;<i class='fa fa-pencil-square'></i>&nbsp;&nbsp;&nbsp;<i class='fa fa-plus-circle'></i>&nbsp;&nbsp;&nbsp;<i class='fa fa-minus-circle'></i>")
-	                				.appendTo("#retrievedUser");		                	   
+	                				.appendTo("#retrievedUser");
+	                	   $("#retrievedUser").css("display", "block");
+	                	   $("#retrievedUser").attr("class", "push_button user hvr-rectangle-out");		                	   
 	                	} else {
 	                		swal("This user does not exist!", "", "error");
 	                	}
@@ -72,6 +75,11 @@ $(function() {
 	               
 	            }); 
 		 }
+	});
+	
+	$('#retrievedUser').on( 'click', '#removeUser', function() {
+		$("#retrievedUser").empty();
+		$("#retrievedUser").css("display", "none");
 	});
 	
 	$('#query').click(function(e) {

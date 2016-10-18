@@ -103,6 +103,7 @@
 #queryResult p {
 	height:30px;
 	padding-top:8px;
+	color:lightgrey;
 }
 
 .fa-eye:hover, .fa-pencil-square:hover, .fa-plus-circle:hover, .fa-minus-circle:hover {
