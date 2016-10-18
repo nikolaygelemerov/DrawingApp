@@ -21,9 +21,22 @@ body {
         text-align: center;
 }
 
- @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-  	
-	#section
+@media all and (max-width: 1280px) {
+    #header {
+      height: 10em;  
+    }
+}
+
+@media all and (max-width: 768px) {
+    #header {
+      height: 15em;  
+    }
+}
+
+@media all and (max-width: 481px) {
+    #header {
+      height: 20em;  
+    }
 }
 
 

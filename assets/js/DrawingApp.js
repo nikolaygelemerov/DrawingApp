@@ -79,6 +79,9 @@ function DrawingApp(canvas_id) {
         
         function setHtml() {
             var buttonsDiv = $("#buttons-menu");
+            $("#header").css({
+                height : "5em"
+            });
             $("#buttons-menu").remove();
             $("#canvas-section").width("85%").css({
                 borderLeft : "0.6em solid" + " " + self.theme.backgroundToolBars,
