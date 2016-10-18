@@ -278,7 +278,7 @@
 
                                     <a href="#" class="push_button user hvr-rectangle-out" id="user-link">
                                         <p style="height:50px; padding-top:20px;" id="uname"><i class="fa fa-user-secret"></i><?php echo $row['username'] ?></p>
-                                        <i class="fa fa-eye" title="See pictures"></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil-square" title="Edit pictures"></i>&nbsp;&nbsp;&nbsp;<i title="Allow access" class="fa fa-plus-circle"></i>&nbsp;&nbsp;&nbsp;<i title="Remove access" class="fa fa-minus-circle"></i>
+                                        <i class="fa fa-eye" title="See pictures"></i>&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil-square" title="Grant edit permission"></i>&nbsp;&nbsp;&nbsp;<i title="Grant watch permission" class="fa fa-plus-circle"></i>&nbsp;&nbsp;&nbsp;<i title="Deny permission" class="fa fa-minus-circle"></i>
                                     </a>
 
                                 <?php endif; ?>

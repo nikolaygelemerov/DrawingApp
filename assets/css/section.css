@@ -106,9 +106,21 @@
 	color:lightgrey;
 }
 
-.fa-eye:hover, .fa-pencil-square:hover, .fa-plus-circle:hover, .fa-minus-circle:hover {
+.fa-eye:hover {
 	cursor:pointer;
 	color:rgb(42, 179, 153);
+	transform: scale(1.5);
+}
+
+.fa-pencil-square:hover, .fa-plus-circle:hover {
+	cursor:pointer;
+	color:rgb(92, 199, 53);
+	transform: scale(1.5);
+}
+
+.fa-minus-circle:hover {
+	cursor:pointer;
+	color:rgb(232, 79, 33);
 	transform: scale(1.5);
 }
 

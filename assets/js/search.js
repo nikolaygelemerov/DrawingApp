@@ -300,7 +300,7 @@ function ajax(textUsername, counter) {
         success: function(data) {
         	if (data == 1) {
         		index = counter;
-        		$(".user p:eq("+index+")").css("color", "yellow");
+        		$(".user p:eq("+index+")").css("color", "rgb(245, 214, 17)");
         		index = 0;
         	}        	
         }
