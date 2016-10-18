@@ -172,9 +172,9 @@ jQuery(document).ready(function ($) {
                     if (data == 1) {
                         window.location.reload();
                     } else if (data == 2) {
-                    	$("#errorEmail").css("display", "block");
+                    	formSignup.find('input[type="email"]').toggleClass('has-error').next('span').next().toggleClass('is-visible');
                     } else if (data == 3) {
-                    	$("#errorUsername").css("display", "block");
+                    	formSignup.find('input[type="text"]').toggleClass('has-error').next('span').next().toggleClass('is-visible');
                     }
                 },
                 dataType: 'json'

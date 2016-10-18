@@ -115,20 +115,14 @@
                                             <label class="image-replace cd-username" for="signup-username">Username</label>
                                             <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
                                             <span class="cd-error-message">Error!</span>
-                                        </p>
-
-                                        <p class="fieldset">
-                                            <label id="errorUsername" class="full-width has-padding has-border" style="display: none; color:#d76666">Username already exists!</label>
+                                            <span class="cd-error-message">Username already exists!</span>
                                         </p>
 
                                         <p class="fieldset">
                                             <label class="image-replace cd-email" for="signup-email">E-mail</label>
                                             <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
                                             <span class="cd-error-message">Error!</span>
-                                        </p>
-
-                                        <p class="fieldset">
-                                            <label id="errorEmail" class="full-width has-padding has-border" style="display: none; color:#d76666">Email already registered!</label>
+                                            <span class="cd-error-message">E-mail already exists!</span>
                                         </p>
 
                                         <p class="fieldset">
