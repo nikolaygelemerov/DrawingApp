@@ -162,6 +162,7 @@ $(function() {
 	            data: $.param({text: text}),
 	            dataType: 'json'	            
 	        });
+	    	$(".user .fa-pencil-square:eq("+indexOfButton+")").css("color", "white");
 	    	$(".user .fa-plus-circle:eq("+indexOfButton+")").css("color", "blue");
 	    } else if (target.is('.fa-pencil-square')) {
 	    	$.ajax({
@@ -170,6 +171,7 @@ $(function() {
 	            data: $.param({text: text}),
 	            dataType: 'json'	            
 	        });
+	    	$(".user .fa-plus-circle:eq("+indexOfButton+")").css("color", "white");
 	    	$(".user .fa-pencil-square:eq("+indexOfButton+")").css("color", "blue");
 	    }  else if (target.is('.fa-minus-circle')) {
 	    	$.ajax({
@@ -208,21 +210,27 @@ $(function() {
 	            url: 'assets/php/giveAccess.php',
 	            data: $.param({text: text}),
 	            dataType: 'json'	            
-	         });
+	        });
+	    	$("#retrievedUser .fa-pencil-square").css("color", "white");
+	    	$("#retrievedUser .fa-plus-circle").css("color", "blue");	    	
 	    } else if (target.is('.fa-pencil-square')) {
 	    	$.ajax({
 	            type: 'POST',
 	            url: 'assets/php/editAccess.php',
 	            data: $.param({text: text}),
 	            dataType: 'json'	            
-	         });
+	        });
+	    	$("#retrievedUser .fa-plus-circle").css("color", "white");
+	    	$("#retrievedUser .fa-pencil-square").css("color", "blue");
 	    } else if (target.is('.fa-minus-circle')) {
 	    	$.ajax({
 	            type: 'POST',
 	            url: 'assets/php/denyAccess.php',
 	            data: $.param({text: text}),
 	            dataType: 'json'	            
-	         });
+	        });
+	    	$("#retrievedUser .fa-plus-circle").css("color", "white");
+	    	$("#retrievedUser .fa-pencil-square").css("color", "white");
 	    }
 	});
 	
