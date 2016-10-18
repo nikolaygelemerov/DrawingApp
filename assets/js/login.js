@@ -135,6 +135,9 @@ jQuery(document).ready(function ($) {
     var counter4 = 0;
     var counter5 = 0;
     
+    var counter6 = 0;
+    var counter7 = 0;
+    
     formSignup.find('input[type="submit"]').on('click', function (event) {
         event.preventDefault();
         var email = $('#signup-email').val();
@@ -171,10 +174,20 @@ jQuery(document).ready(function ($) {
                 	$("#errorUsername").css("display", "none");
                     if (data == 1) {
                         window.location.reload();
-                    } else if (data == 2) {
-                    	formSignup.find('input[type="email"]').toggleClass('has-error').next('span').next().toggleClass('is-visible');
-                    } else if (data == 3) {
-                    	formSignup.find('input[type="text"]').toggleClass('has-error').next('span').next().toggleClass('is-visible');
+                    } else {
+                    	if (data == 2 && counter6 == 0) {
+                        	formSignup.find('input[type="email"]').toggleClass('has-error').next('span').next().toggleClass('is-visible');
+                        	counter6++;
+                        } if (data != 2 && counter6 == 1) {
+                        	formSignup.find('input[type="email"]').toggleClass('has-error').next('span').next().toggleClass('is-visible');
+                        	counter6++;
+                        } if (data == 3 && counter7 == 0) {
+                        	formSignup.find('input[type="text"]').toggleClass('has-error').next('span').next().toggleClass('is-visible');
+                        	counter7++;
+                        } if (data != 3 && counter7 == 1) {
+                        	formSignup.find('input[type="text"]').toggleClass('has-error').next('span').next().toggleClass('is-visible');
+                        	counter7++;
+                        }
                     }
                 },
                 dataType: 'json'
