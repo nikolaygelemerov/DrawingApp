@@ -74,12 +74,53 @@ function DrawingApp(canvas_id) {
         self.history.redo(canvas, ctx);
         console.log('redo');
     });
-    
-//    $(function() {
-//        self.buttons.drawLogo();
-//    });
-}
-;
+    ///makin this shit responsive
+    $(function() {
+        
+        function setHtml() {
+            var buttonsDiv = $("#buttons-menu");
+            $("#buttons-menu").remove();
+            $("#canvas-section").width("85%").css({
+                borderLeft : "0.6em solid" + " " + self.theme.backgroundToolBars,
+                backgroundColor : self.buttons.backgroundColor
+            });
+            $("#canvas").width("90%");
+            $("#canvas-footer").width("85%");
+            buttonsDiv.insertAfter($('#section'));
+            $("#buttons-list li a").css({
+                display : "inline-block",
+                float : "left"
+            });
+        }
+        
+        if (screen.width <= 1280 && screen.width > 768) {
+            
+            setHtml();
+            $(".push_button:not(.user)").css({
+               width : "5.814em" 
+            });
+        } else if (screen.width <= 768){
+            setHtml();
+            $(".push_button:not(.user)").css({
+               width : "5.565em" 
+            });
+        }
+        
+        ///binding touch events
+        $('#btn-clear').on('touchstart', self.clear.bind(self));
+        $("#btn-format-png").on("touchstart", function() {
+            self.clearPng.bind(self)();
+            $("#canvas-section").css({
+                backgroundColor : self.buttons.backgroundColor
+            });
+        });
+        $('#btn-text').on('touchstart', function(e) {
+            self.clickText(e);
+            self.$canvas.off('touchmove', self.sketchpadTouchMove.bind(self));
+        });
+        
+    });
+};
 
 DrawingApp.prototype.putWidget = function (e) {
     if (this.leftMouseButtonClicked) {

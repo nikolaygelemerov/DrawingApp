@@ -33,7 +33,7 @@ function Theme() {
     $('#colors').on('click', this.putBorder.bind(this));
     //  $("#header").on('click', this.putBorderReload.bind(self));
     $(function () {
-        if (screen.width < 1024) {
+        if (screen.width <= 1280) {
 
             var colors = $('#colors');
             $('#colors').remove();
@@ -42,7 +42,7 @@ function Theme() {
                 height: "1em"
             });
             colors.appendTo($('#canvas-footer')).css({
-                marginLeft: "5em",
+                marginLeft: "1em",
                 marginTop: "0.2em",
                 zIndex: "9999"
             });
@@ -50,7 +50,6 @@ function Theme() {
                
                 self.putBorder(e);
             });
-
         }
 
         if (self.getCokie("theme")) {
