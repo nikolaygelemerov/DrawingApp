@@ -252,12 +252,14 @@ $(document).ready(function() {
 	});
 	
 	$.get('assets/php/checkUser.php', function(data) {
-		var printName = data;
-		printName = printName.replace(/['"]+/g, '');
-		if ($("#loggedUser").html() != printName) {
-			$("<p id='userPics'>"  + printName + "'s pictures</p>").appendTo("#canvas-footer");
-		} else {
-			$("<p id='userPics'>My pictures</p>").appendTo("#canvas-footer");
+		if (data != 'false') {
+			var printName = data;
+			printName = printName.replace(/['"]+/g, '');
+			if ($("#loggedUser").html() != printName) {
+				$("<p id='userPics'>"  + printName + "'s pictures</p>").appendTo("#canvas-footer");
+			} else {
+				$("<p id='userPics'>My pictures</p>").appendTo("#canvas-footer");
+			}
 		}	
 	});
 	

@@ -2,6 +2,8 @@
 
 session_start();
 
+$uname = false;
+
 if(isset($_SESSION['login'])){
 	if ($_SESSION['login'] == 'logged') {
 		$servername = "localhost";

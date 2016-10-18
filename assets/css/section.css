@@ -276,6 +276,8 @@
 
 #userPics {
 	color:lightgrey;
+	padding-top:0.8%;
+	font-size:160%;
 }
 
 @-webkit-keyframes anim-1 {
