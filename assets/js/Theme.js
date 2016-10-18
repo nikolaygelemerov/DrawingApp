@@ -46,8 +46,7 @@ function Theme() {
                 marginTop: "0.2em",
                 zIndex: "9999"
             });
-            $('#canvas-footer').on('touchstart', colors, function (e) {
-               
+            $('#canvas-footer').on('touchstart', colors, function (e) {              
                 self.putBorder(e);
             });
         }

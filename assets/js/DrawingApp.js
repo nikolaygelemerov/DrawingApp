@@ -86,10 +86,38 @@ function DrawingApp(canvas_id) {
             });
             $("#canvas").width("90%");
             $("#canvas-footer").width("85%");
-            buttonsDiv.insertAfter($('#section'));
+            buttonsDiv.insertAfter($('#section')).css({
+                zIndex: "9999"
+            });
             $("#buttons-list li a").css({
                 display : "inline-block",
                 float : "left"
+            });
+            
+            ///binding touch events
+            $('#btn-clear').on('touchstart', self.clear.bind(self));
+            $("#btn-format-png").on("touchstart", function() {
+                self.clearPng.bind(self)();
+                $("#canvas-section").css({
+                    backgroundColor : self.buttons.backgroundColor
+                });
+            });
+            $('#btn-text').on('touchstart', function(e) {
+                self.clickText(e);
+                self.$canvas.off('touchmove', self.sketchpadTouchMove.bind(self));
+            }); 
+            
+            $('#triangle').on('touchstart', function(e) {
+                self.buttons.clickTriangle.bind(self.buttons, e)();
+                self.toggleMouseDown(e);
+            });
+            $('#square').on('touchstart', function(e) {
+                self.buttons.clickSquare.bind(self.buttons, e)();
+                self.toggleMouseDown(e);
+            });
+            $('#circle').on('touchstart', function(e) {
+                self.buttons.clickCircle.bind(self.buttons, e)();
+                self.toggleMouseDown(e);
             });
         }
         
@@ -104,21 +132,7 @@ function DrawingApp(canvas_id) {
             $(".push_button:not(.user)").css({
                width : "5.565em" 
             });
-        }
-        
-        ///binding touch events
-        $('#btn-clear').on('touchstart', self.clear.bind(self));
-        $("#btn-format-png").on("touchstart", function() {
-            self.clearPng.bind(self)();
-            $("#canvas-section").css({
-                backgroundColor : self.buttons.backgroundColor
-            });
-        });
-        $('#btn-text').on('touchstart', function(e) {
-            self.clickText(e);
-            self.$canvas.off('touchmove', self.sketchpadTouchMove.bind(self));
-        });
-        
+        }       
     });
 };
 
