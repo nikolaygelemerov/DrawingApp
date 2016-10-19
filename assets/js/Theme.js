@@ -53,6 +53,7 @@ function Theme() {
 
         if (self.getCokie("theme")) {
             $("#" + self.getCokie("theme")).trigger("click");
+            console.log($("#" + self.getCokie("theme")));
         }
         
         if ($("#imgs").find("div").length !== 0) {

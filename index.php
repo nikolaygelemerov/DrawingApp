@@ -216,7 +216,7 @@
                         <li>
                             <a href="#" class="push_button red-light">
                                 <button type="button" class="buttons hvr-pop" id="triangle">
-                                    <i class="fa fa-caret-up fa-3x" aria-hidden="true"></i>
+                                    <span>△</span>
                                 </button>
                             </a>
                         </li>

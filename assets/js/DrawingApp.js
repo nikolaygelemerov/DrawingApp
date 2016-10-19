@@ -31,7 +31,8 @@ function DrawingApp(canvas_id) {
     $("#btn-format-png").on("click", this.clearPng.bind(this));
 
     $('#btn-text').on('click', this.clickText.bind(this));
-
+    
+    //undo redo
     var canvas = this.canvas;
     var ctx = this.drawingArea.context;
     var width = this.canvas.width;

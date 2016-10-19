@@ -363,8 +363,9 @@
     background-image:-o-linear-gradient(top, #827282, #baa5ba);	
 }
 
-.red-light #triangle {
-    margin-top: -0.4em;
+.red-light #triangle span {
+    font-size: 250%;
+    line-height: 0.7em;
 }
 
 .user {
