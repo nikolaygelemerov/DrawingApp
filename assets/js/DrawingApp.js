@@ -7,7 +7,7 @@ function DrawingApp(canvas_id) {
     this.textInput = false;
     var self = this;
     this.drawingArea = new DrawingArea(this.canvas);
-
+    
     this.leftMouseButtonClicked = false;
 
     this.$canvas.bind('mousedown', this.toggleMouseDown.bind(this));
