@@ -7,6 +7,7 @@ function DrawingApp(canvas_id) {
     this.textInput = false;
     var self = this;
     var temp = [];
+    var keep = [];
 
     this.drawingArea = new DrawingArea(this.canvas);
 
