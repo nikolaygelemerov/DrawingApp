@@ -6,7 +6,6 @@ function DrawingApp(canvas_id) {
     this.inputVal = "Hello World!";
     this.textInput = false;
     var self = this;
-
     this.drawingArea = new DrawingArea(this.canvas);
 
     this.leftMouseButtonClicked = false;
