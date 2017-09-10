@@ -1,8 +1,9 @@
 nbproject
 bower.json
-package.json
 gulpfile.js
-
+node_modules
+assets/sweetalert-master
 Gruntfile.js
+.idea
 
 
