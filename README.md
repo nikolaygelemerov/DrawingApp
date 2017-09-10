@@ -1,2 +1,4 @@
-Final drawApp project
+Drawing App/final project
+
+IT Talents Academy
 
